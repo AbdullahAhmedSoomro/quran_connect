@@ -4,7 +4,7 @@ Connecting to the Quran
 
 ## Contribution
 
-- Create a branch for the issue that has been assigned to you (git checkout -b issue/issue-title)
+- Create a branch for the issue that has been assigned to you (git checkout -b issue-number/issue-title)
 - Commit your Changes (git commit -m 'Added some amazing feature')
 - Push to the origin Branch (git push origin issue/issue-title)
 - Create a Pull Request to master.
