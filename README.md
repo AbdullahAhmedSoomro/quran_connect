@@ -59,6 +59,7 @@ Credits: [asciiflow](https://asciiflow.com/)
 
 ```
 lib
+├── cubits
 ├── data
 │   ├── app.dart
 │   ├── models
@@ -78,6 +79,7 @@ lib
 |   └── repository
 ├── presentation
 │   ├── service
+│   ├── routes
 │   ├── shared
 │   ├── theme
 │   ├── utils
