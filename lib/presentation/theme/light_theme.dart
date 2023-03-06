@@ -15,23 +15,29 @@ class LightTheme extends BaseTheme {
 
   @override
   FontTheme get fontTheme {
-    return const FontTheme(
-      heading1: TextStyle(
+    return FontTheme(
+      heading1: const TextStyle(
         fontSize: 30,
       ),
-      heading2: TextStyle(
+      heading2: const TextStyle(
         fontSize: 25,
       ),
       heading3: TextStyle(
         fontSize: 20,
+        height: 1.4,
+        color: backgroundTheme.quinaryColor,
       ),
       body1: TextStyle(
         fontSize: 18,
+        height: 1.4,
+        color: backgroundTheme.quinaryColor,
       ),
       body2: TextStyle(
         fontSize: 16,
+        height: 1.4,
+        color: backgroundTheme.quinaryColor,
       ),
-      caption: TextStyle(
+      caption: const TextStyle(
         fontSize: 14,
       ),
     );
@@ -40,7 +46,7 @@ class LightTheme extends BaseTheme {
   @override
   FontFamily get fontFamily {
     return FontFamily(
-      primary: 'primary',
+      primary: 'JosefinSans',
       secondary: 'secondary',
     );
   }

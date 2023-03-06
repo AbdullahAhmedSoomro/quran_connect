@@ -59,9 +59,8 @@ flutter:
   uses-material-design: true
 
   # To add assets to your application, add an assets section, like this:
-  # assets:
-  #   - images/a_dot_burr.jpeg
-  #   - images/a_dot_ham.jpeg
+  assets:
+    - assets/images/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
@@ -74,6 +73,27 @@ flutter:
   # "family" key with the font family name, and a "fonts" key with a
   # list giving the asset and other descriptors for the font. For
   # example:
+  fonts:
+    # roboto
+    # ralway 500
+    # ralway 700
+    - family: JosefinSans
+      fonts:
+        - asset: assets/fonts/JosefinSans-Thin.ttf
+          weight: 100
+        - asset: assets/fonts/JosefinSans-ExtraLight.ttf
+          weight: 200
+        - asset: assets/fonts/JosefinSans-Light.ttf
+          weight: 300
+        - asset: assets/fonts/JosefinSans-Regular.ttf
+          weight: 400
+        - asset: assets/fonts/JosefinSans-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/JosefinSans-SemiBold.ttf
+          weight: 600
+        - asset: assets/fonts/JosefinSans-Bold.ttf
+          weight: 700
+
   # fonts:
   #   - family: Schyler
   #     fonts:
