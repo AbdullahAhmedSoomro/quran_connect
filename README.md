@@ -14,7 +14,6 @@ Connecting to the Quran
 ## Getting Started / Code GuideLines
 
 - Whenever making a new screen, add Route in the `AppRoute` Class.
-- Use `GoRouter` for Navigation logic.
 - For Material Widgets Styling, we are using CustomTheme.
 - Put widget in shared folder if the widget is shared between 2 or more screens.
 - Make a class _Private if it is not shared or does not needed to be exposed for other classes
