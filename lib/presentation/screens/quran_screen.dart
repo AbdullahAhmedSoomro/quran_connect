@@ -25,7 +25,8 @@ class QuranScreen extends StatelessWidget {
             const SizedBox(height: 30),
             const PrimaryTile(
               title: 'Quran',
-              imagePath: 'assets/images/quran.png',
+              imagePath: 'assets/images/quran_word.png',
+              isQuran: true,
             ),
             const SizedBox(height: 30),
             Container(
@@ -39,11 +40,15 @@ class QuranScreen extends StatelessWidget {
                 children: const [
                   PrimaryBox(
                     title: 'Sipara',
-                    imagePath: 'assets/images/quran.png',
+                    imagePath: 'assets/images/star.png',
+                    // isQuranScreen: true,
+                    size: 50,
                   ),
                   PrimaryBox(
                     title: 'Surah',
                     imagePath: 'assets/images/quran.png',
+                    isQuranScreen: true,
+                    size: 80,
                   ),
                 ],
               ),

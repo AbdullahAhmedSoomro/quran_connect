@@ -3,11 +3,13 @@ import 'package:flutter/material.dart';
 class PrimaryTile extends StatelessWidget {
   final String title;
   final String imagePath;
+  final bool isQuran;
 
   const PrimaryTile({
     Key? key,
     required this.title,
     required this.imagePath,
+    this.isQuran = false,
   }) : super(key: key);
 
   @override
@@ -41,11 +43,14 @@ class PrimaryTile extends StatelessWidget {
             ),
           ),
           Positioned(
-            right: -20,
-            bottom: -15,
-            child: Image(
-              image: AssetImage(imagePath),
-              width: 150,
+            right: isQuran ? -20 : 0,
+            bottom: isQuran ? 8 : 0,
+            child: Opacity(
+              opacity: isQuran ? 1 : 0.5,
+              child: Image(
+                image: AssetImage(imagePath),
+                width: isQuran ? 150 : 100,
+              ),
             ),
           ),
         ],
@@ -60,6 +65,7 @@ class PrimaryCard extends StatelessWidget {
   final String english;
   final String reference;
   final String imagePath;
+  final bool isAyah;
 
   const PrimaryCard({
     Key? key,
@@ -68,6 +74,7 @@ class PrimaryCard extends StatelessWidget {
     required this.english,
     required this.reference,
     required this.imagePath,
+    this.isAyah = false,
   }) : super(key: key);
 
   @override
@@ -143,11 +150,16 @@ class PrimaryCard extends StatelessWidget {
               right: -20,
               bottom: -15,
               child: Opacity(
-                opacity: 0.3,
-                child: Image(
-                  image: AssetImage(imagePath),
-                  width: 160,
-                ),
+                opacity: 0.1,
+                child: isAyah
+                    ? Image(
+                        image: AssetImage(imagePath),
+                        width: 160,
+                      )
+                    : ImageIcon(
+                        AssetImage(imagePath),
+                        size: 130,
+                      ),
               ),
             ),
           ],
@@ -160,11 +172,15 @@ class PrimaryCard extends StatelessWidget {
 class PrimaryBox extends StatelessWidget {
   final String title;
   final String imagePath;
+  final double size;
+  final bool isQuranScreen;
 
   const PrimaryBox({
     Key? key,
     required this.title,
     required this.imagePath,
+    this.size = 50,
+    this.isQuranScreen = false,
   }) : super(key: key);
 
   @override
@@ -195,10 +211,16 @@ class PrimaryBox extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              Image(
-                image: AssetImage(imagePath),
-                width: 80,
-              ),
+              isQuranScreen
+                  ? Image(
+                      image: AssetImage(imagePath),
+                      width: size,
+                    )
+                  : ImageIcon(
+                      AssetImage(imagePath),
+                      size: size,
+                      color: Colors.white,
+                    ),
               Text(
                 title,
                 style: Theme.of(context)

@@ -25,24 +25,25 @@ class EmotionScreen extends StatelessWidget {
             children: [
               const SizedBox(height: 30),
               const PrimaryTile(
+                title: 'Surah',
+                imagePath: 'assets/images/quran.png',
+              ),
+              const SizedBox(height: 30),
+              const PrimaryTile(
                 title: 'Ayahs',
                 imagePath: 'assets/images/quran.png',
               ),
               const SizedBox(height: 30),
               const PrimaryTile(
-                title: 'Duas',
-                imagePath: 'assets/images/quran.png',
-              ),
-              const SizedBox(height: 30),
-              const PrimaryTile(
                 title: 'Hadith',
-                imagePath: 'assets/images/quran.png',
+                imagePath: 'assets/images/hadith.png',
               ),
               const SizedBox(height: 30),
               const PrimaryTile(
-                title: 'Surah',
-                imagePath: 'assets/images/quran.png',
+                title: 'Duas',
+                imagePath: 'assets/images/dua-hands.png',
               ),
+              const SizedBox(height: 30),
               SizedBox(height: screenHeight * 0.129),
             ],
           ),

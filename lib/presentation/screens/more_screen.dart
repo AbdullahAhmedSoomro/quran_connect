@@ -14,19 +14,20 @@ class _MoreScreenState extends State<MoreScreen> {
     final defaultList = [
       const PrimaryBox(
         title: 'Qiblah',
-        imagePath: 'assets/images/quran.png',
+        imagePath: 'assets/images/qibla-compass.png',
+        size: 65,
       ),
       const PrimaryBox(
         title: 'Prayer Times',
-        imagePath: 'assets/images/quran.png',
+        imagePath: 'assets/images/pray.png',
       ),
       const PrimaryBox(
         title: 'Husnas',
-        imagePath: 'assets/images/quran.png',
+        imagePath: 'assets/images/allah-word.png',
       ),
       const PrimaryBox(
         title: 'Rules',
-        imagePath: 'assets/images/quran.png',
+        imagePath: 'assets/images/list.png',
       ),
     ];
     yield defaultList;
