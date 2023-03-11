@@ -20,12 +20,13 @@ class PrimaryAppBar extends StatelessWidget implements PreferredSizeWidget {
 
   @override
   Widget build(BuildContext context) {
+    var width = MediaQuery.of(context).size.width;
     return Stack(
       alignment: Alignment.center,
       children: [
         Image(
           image: AssetImage(imagePath),
-          width: 360,
+          width: width,
           fit: BoxFit.fill,
         ),
         Positioned(
