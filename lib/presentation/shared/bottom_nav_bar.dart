@@ -4,22 +4,12 @@ class BottomNavBar extends StatelessWidget {
   final int currentIndex;
   final List<BottomNavigationBarItem> items;
   final ValueChanged<int> onTap;
-  final Color? selectedItemColor;
-  final Color? unselectedItemColor;
-  final TextStyle? selectedLabelStyle;
-  final TextStyle? unselectedLabelStyle;
-  final Color? backgroundColor;
 
   const BottomNavBar({
     Key? key,
     required this.currentIndex,
     required this.items,
     required this.onTap,
-    this.selectedItemColor,
-    this.unselectedItemColor,
-    this.selectedLabelStyle,
-    this.unselectedLabelStyle,
-    this.backgroundColor,
   }) : super(key: key);
 
   @override
@@ -48,11 +38,11 @@ class BottomNavBar extends StatelessWidget {
               highlightColor: Colors.transparent,
             ),
             child: BottomNavigationBar(
+              selectedItemColor: const Color(0xff9055FF),
+              unselectedItemColor: Colors.grey,
+              selectedLabelStyle: Theme.of(context).textTheme.bodyLarge,
+              unselectedLabelStyle: Theme.of(context).textTheme.bodyLarge,
               backgroundColor: Colors.white,
-              selectedItemColor: Colors.blue,
-              unselectedItemColor: Colors.blue.withOpacity(0.4),
-              // selectedLabelStyle:
-              // unselectedLabelStyle:
               currentIndex: currentIndex,
               onTap: onTap,
               items: items,
