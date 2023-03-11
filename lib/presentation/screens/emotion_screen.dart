@@ -7,6 +7,7 @@ class EmotionScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final double screenHeight = MediaQuery.of(context).size.height;
     return Scaffold(
       appBar: PrimaryAppBar(
         imagePath: 'assets/images/home_background.png',
@@ -16,19 +17,35 @@ class EmotionScreen extends StatelessWidget {
         englishDateTime: DateTime.now(),
         hijriDateTime: DateTime.now(),
       ),
-      body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 20),
-        child: Column(
-          children: const [
-            SizedBox(height: 30),
-            PrimaryTile(title: 'Ayahs', imagePath: 'assets/images/quran.png'),
-            SizedBox(height: 30),
-            PrimaryTile(title: 'Duas', imagePath: 'assets/images/quran.png'),
-            SizedBox(height: 30),
-            PrimaryTile(title: 'Hadith', imagePath: 'assets/images/quran.png'),
-            SizedBox(height: 30),
-            PrimaryTile(title: 'Surah', imagePath: 'assets/images/quran.png'),
-          ],
+      body: SingleChildScrollView(
+        physics: const BouncingScrollPhysics(),
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 20),
+          child: Column(
+            children: [
+              const SizedBox(height: 30),
+              const PrimaryTile(
+                title: 'Ayahs',
+                imagePath: 'assets/images/quran.png',
+              ),
+              const SizedBox(height: 30),
+              const PrimaryTile(
+                title: 'Duas',
+                imagePath: 'assets/images/quran.png',
+              ),
+              const SizedBox(height: 30),
+              const PrimaryTile(
+                title: 'Hadith',
+                imagePath: 'assets/images/quran.png',
+              ),
+              const SizedBox(height: 30),
+              const PrimaryTile(
+                title: 'Surah',
+                imagePath: 'assets/images/quran.png',
+              ),
+              SizedBox(height: screenHeight * 0.129),
+            ],
+          ),
         ),
       ),
     );
